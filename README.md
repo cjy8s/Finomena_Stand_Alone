@@ -96,6 +96,11 @@ memory and is run as a SageMaker Processing job. This requires an AWS account wi
 SageMaker access, an ECR image (see [`docs/SAGEMAKER_README.md`](docs/SAGEMAKER_README.md)),
 and these environment variables (so no account-specific values are committed):
 
+> **Key design point.** Each compound appears on exactly one plate; only the
+> vehicle (DMSO) controls are shared across plates. Compound effect is therefore
+> confounded with plate/batch, so **every plate is analysed independently** and
+> results are never pooled or compared across plates. 
+
 ```bash
 export FINOMENA_AWS_ACCOUNT=<your 12-digit account id>
 export FINOMENA_AWS_REGION=us-east-1            # optional (default)
