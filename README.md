@@ -13,12 +13,6 @@ a Bayesian posterior probability of equivalence to wild-type. See
 [`docs/BATCH_CONFOUND_WRITEUP.md`](docs/BATCH_CONFOUND_WRITEUP.md) for the design
 reasoning.
 
-> **Key design point.** Each compound appears on exactly one plate; only the
-> vehicle (DMSO) controls are shared across plates. Compound effect is therefore
-> confounded with plate/batch, so **every plate is analysed independently** and
-> results are never pooled or compared across plates. This is deliberate, not a
-> bug — see the batch-confound writeup.
-
 ## Repository layout
 
 ```
