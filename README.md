@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Finomena zebrafish rescue drug screen — analysis pipeline
 
 Analysis code for a larval-zebrafish behavioural **rescue drug screen**. Larvae
@@ -121,3 +122,6 @@ provided the copyright notice is retained. If you use this code, please cite the
 project and the associated paper as described in [`CITATION.cff`](CITATION.cff).
 **[Fill in the author, paper, and repository details marked TODO in `CITATION.cff`
 and the copyright holder in `LICENSE` before publishing.]**
+=======
+# Finomena_Stand_Alone
+>>>>>>> f0da1b42af2bfeb50b7412469b24df889031a408
