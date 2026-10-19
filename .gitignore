@@ -1,0 +1,29 @@
+# ── Data lives outside git (2.3 GB; archived as separate tarballs) ───────────
+# Raw .xls tracking files, aggregated data, posterior draws, and figures are all
+# regenerable or too large for git. See MANIFEST.md for what's archived where.
+Data/
+# Stale/backup data trees that are not part of the project (orphan snapshots).
+Data_old/
+Data_*/
+
+# ── Python / R scratch ───────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+.RData
+.Rhistory
+*.Rproj.user
+
+# ── Local scratch / job-tracking artifacts ──────────────────────────────────
+check
+finomena_bundles/
+
+# ── Unpublished manuscript drafts / internal notes (kept outside this repo) ──
+# These live elsewhere; the rules are a safety net so a stray copy is never
+# committed by accident.
+RESCUE_SCREEN_PAPER_NOTES.md
+FORMULA_SELECTION_SUPPLEMENT.md
+*_PAPER_NOTES.md
+*_SUPPLEMENT.md
+
+# ── OS cruft ─────────────────────────────────────────────────────────────────
+.DS_Store

@@ -1,0 +1,17 @@
+# Python dependencies for the finomena rescue-screen pipeline.
+#   pip install -r requirements.txt
+#
+# The post-processing steps (consolidate_results.py, compute_ssmd_glass.py) use
+# only the Python standard library and need nothing here. These packages are for
+# the orchestration and the (deprecated) matplotlib plotting script.
+
+# AWS SDK — job submission / S3 sync (launch_bam_job.py, sync_to_s3.py).
+boto3>=1.26
+
+# Only for the DEPRECATED make_plots.py (superseded by make_plots.r); not used by
+# the production pipeline. Install only if running the old matplotlib figures.
+numpy>=1.24
+matplotlib>=3.7
+
+# NOTE: the AWS CLI (`aws`) must also be installed and configured separately
+# (sync_to_s3.py and the figure-pull step shell out to it).

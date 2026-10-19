@@ -1,0 +1,32 @@
+# R package dependencies for the finomena rescue-screen pipeline.
+#
+# The analysis scripts auto-install anything missing at runtime (from CRAN, or
+# the Posit PPM binary mirror inside the SageMaker container), so no manual
+# install is strictly required. This list is for reference and for building a
+# container image with the packages baked in. Tested on R 4.4.2.
+#
+# One-shot manual install:
+#   Rscript -e 'install.packages(c("tidyverse","data.table","mgcv","emmeans","jsonlite","MASS","RhpcBLASctl","ggplot2","scales","ggnewscale","gridExtra","readr"))'
+
+# ── Model fitting (initial_screen_script.r, stand-alone_script.r, ablation_study.R)
+tidyverse        # dplyr, tidyr, ggplot2, readr, purrr, etc.
+data.table       # fast aggregation of the per-frame movement data
+mgcv             # Tweedie GAMM via bam(); the core model
+emmeans          # estimated marginal means / contrasts (confirmation mode)
+jsonlite         # read/write the correction + contrast spec sidecars
+MASS             # mvrnorm() for the Bayesian posterior-equivalence draws
+RhpcBLASctl      # per-phase BLAS thread control (avoids OpenBLAS oversubscription)
+parallel         # base R; ships with the install (not installed separately)
+
+# ── Figures (make_plots.r)
+ggplot2 (>= 3.5.0)   # faceted figures; the script enforces this minimum
+scales  (>= 1.4.0)   # required by ggplot2 4.x; enforced by the script
+ggnewscale           # two colour scales on the trajectory panels
+gridExtra            # tiling the per-plate trajectory panels
+
+# ── Optional / mode-specific
+ashr             # rescue_addons.r ONLY when FINOMENA_USE_ASHR=1 (off by default)
+graphicalMCP     # corrections.R ONLY for the graphical-MCP FWER path (optional)
+
+# NOTE: gratia is intentionally NOT a dependency — it is referenced only in
+# provenance comments (TweedieAR1_BAM.R) and is never sourced or called.
