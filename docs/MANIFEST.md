@@ -38,7 +38,7 @@ aws s3 sync s3://sagemaker-us-east-1-<ACCOUNT_ID>/finomena/bam-run/initial/outpu
 ## Docs
 `README.md` (repo landing page / quick start), `SAGEMAKER_README.md`,
 `BATCH_CONFOUND_WRITEUP.md`, `INITIAL_SCREEN_BUILD_PLAN.md`. Dependencies:
-`requirements.txt` (Python), `R_dependencies.txt` (R). Licensing / citation:
+`Python_dependencies.txt` (Python), `R_dependencies.txt` (R). Licensing / citation:
 `LICENSE` (MIT), `CITATION.cff`.
 
 ## Deprecated

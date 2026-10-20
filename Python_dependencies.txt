@@ -1,5 +1,5 @@
 # Python dependencies for the finomena rescue-screen pipeline.
-#   pip install -r requirements.txt
+#   pip install -r Python_dependencies.txt
 #
 # The post-processing steps (consolidate_results.py, compute_ssmd_glass.py) use
 # only the Python standard library and need nothing here. These packages are for

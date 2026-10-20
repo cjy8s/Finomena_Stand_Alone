@@ -16,7 +16,7 @@ reasoning.
 ## Repository layout
 
 ```
-README.md  LICENSE  CITATION.cff  requirements.txt  R_dependencies.txt   # root
+README.md  LICENSE  CITATION.cff  Python_dependencies.txt  R_dependencies.txt   # root
 
 src/                          all analysis + orchestration code
   initial_screen_script.r     Step 1 — the BAM fit (per plate). Main analysis script.
@@ -63,7 +63,7 @@ or institutional URL.]**
 - **R ≥ 4.4** with the packages in [`R_dependencies.txt`](R_dependencies.txt). The
   scripts auto-install anything missing at runtime, so no manual step is required;
   install manually only to pre-build an environment or a container image.
-- **Python ≥ 3.10** — see [`requirements.txt`](requirements.txt). The two
+- **Python ≥ 3.10** — see [`Python_dependencies.txt`](Python_dependencies.txt). The two
   post-processing steps use only the standard library; `boto3` + the AWS CLI are
   needed only to run on SageMaker.
 
